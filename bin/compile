@@ -16,13 +16,10 @@ DOWNLOAD_GIT_URL="https://github.com/realizerS/heroku-buildpack-gnuplot-targz.gi
 echo "DOWNLOAD_GIT_URL = " $DOWNLOAD_GIT_URL | indent
 
 cd $BUILD_DIR
-echo "cd: " `pwd` | indent
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
-echo "cd: " `pwd` | indent
 git clone $DOWNLOAD_GIT_URL gnuplot
 cd gnuplot
-echo "cd: " `pwd` | indent
 tar xzf gnuplot-5.0.3-bin.tar.gz
 
 

@@ -18,7 +18,7 @@ echo "cd: " `pwd` | indent
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
 echo "cd: " `pwd` | indent
-git clone $DOWNLOAD_GIT_URL gunplot
+git clone $DOWNLOAD_GIT_URL gnuplot
 cd gnuplot
 tar xzf gnuplot-5.0.3-bin.tar.gz
 

@@ -6,9 +6,10 @@ indent() {
 }
 
 echo "-----> Install gnuplot"
-echo $2
-BUILD_DIR=$1
-VENDOR_DIR="/app/vendor"
+BUILD_DIR=$(cd "$1/" && pwd)
+CACHE_DIR=$(cd "$2/" && pwd)
+
+VENDOR_DIR="vendor"
 
 DOWNLOAD_GIT_URL="https://github.com/realizerS/heroku-buildpack-gnuplot-targz.git"
 

@@ -1,10 +1,11 @@
 #!/bin/sh
 
+# 出力時にインデントを揃えるための関数
 indent() {
   sed -u 's/^/       /'
 }
 
-echo "-----> Install ffmpeg"
+echo "-----> Install gnuplot"
 BUILD_DIR=$1
 VENDOR_DIR="/app/vendor"
 
@@ -13,8 +14,10 @@ DOWNLOAD_GIT_URL="https://github.com/realizerS/heroku-buildpack-gnuplot-targz.gi
 echo "DOWNLOAD_GIT_URL = " $DOWNLOAD_GIT_URL | indent
 
 cd $BUILD_DIR
+echo "cd: " `pwd` | indent
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
+echo "cd: " `pwd` | indent
 git clone $DOWNLOAD_GIT_URL gunplot
 cd gnuplot
 tar xzf gnuplot-5.0.3-bin.tar.gz

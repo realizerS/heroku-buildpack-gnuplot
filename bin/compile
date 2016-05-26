@@ -6,6 +6,7 @@ indent() {
 }
 
 echo "-----> Install gnuplot"
+echo $2
 BUILD_DIR=$1
 VENDOR_DIR="/app/vendor"
 
@@ -20,6 +21,7 @@ cd $VENDOR_DIR
 echo "cd: " `pwd` | indent
 git clone $DOWNLOAD_GIT_URL gnuplot
 cd gnuplot
+echo "cd: " `pwd` | indent
 tar xzf gnuplot-5.0.3-bin.tar.gz
 
 
